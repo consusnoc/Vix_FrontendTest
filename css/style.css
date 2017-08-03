@@ -127,8 +127,7 @@ body {
   font-weight: bold;
 }
 
-#hero h2{
-    
+#hero h2{    
   /* I decided to do this to prevent bootstrap default style override my style */
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
@@ -192,7 +191,8 @@ body {
 /* 
 
 I also made the checkbox field a bit larger very easily without using id or classes.
-I found the way to do this thanks to a question in stackoverflow
+I found the way to do this thanks to a question in stackoverflow, here it is 
+https://stackoverflow.com/questions/306924/checkbox-size-in-html-css
 
 */
 
