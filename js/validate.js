@@ -2,7 +2,7 @@
 
 //first I set the variables outside the function
 
-var form = document.getElementById("form-validation");
+var form = document.getElementById("formulario");
 
 var name = document.getElementById("name");
 var email = document.getElementById("email");
@@ -93,7 +93,7 @@ function checkTerms(e) {
 
 //This function validates the message written in the textarea
 function validateMessage(e){
-    if(comment.value == "" || comment.value == "null" ){
+    if(message.value == "" || message.value == "null" ){
         console.log("The message is empty");
         errors.push("<li>Please write a comment</li>");
         //With prevent default I make sure that the form will not be submitted until it is validated
@@ -118,7 +118,7 @@ function validateForm(e){
 		validateName(e);
 		validateEmail(e);
         checkTerms(e);
-		validateMessage(e)
+		validateMessage(e);
     
         //This conditional means that if the array I created is empty (meaning there are no errors in the form), it will not show anything and the form will be submitted    
 		if(errors.length == 0) {
@@ -134,5 +134,5 @@ function validateForm(e){
 } //End validateForm//
 
 //Here I'm using the addEventListener to register any kind of activity (for example, clicking the checkbox or the button)
-check.addEventListener('click', checkTerms);
-form.addEventListener('submit', validateForm);
+check.addEventListener('click', checkbox);
+form.addEventListener('submit', formulario);
