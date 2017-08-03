@@ -134,5 +134,5 @@ function validateForm(e){
 } //End validateForm//
 
 //Here I'm using the addEventListener to register any kind of activity (for example, clicking the checkbox or the button)
-check.addEventListener('click', checkbox);
-form.addEventListener('submit', formulario);
+check.addEventListener('click', checkTerms);
+form.addEventListener('submit', ValidateForm);
