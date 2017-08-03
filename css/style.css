@@ -1,0 +1,260 @@
+@import 'bootstrap.min.css';
+
+
+/* ========== GENERAL STYLES ========== */
+
+/* They apply to the whole page */
+
+body {
+  min-height: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* ==========  RESPONSIVE NAVBAR ========== */
+
+/* I couldn't solve a few parts of the navbar. */
+
+
+.navbar {
+  background-color: #ffffff;
+  font-size: 14pt;    
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  min-height: 84px;
+  padding-left: 25px;
+  top: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+  position: fixed;
+}
+
+.navbar .navbar-brand {
+  max-width: 300px;
+}
+
+.navbar .navbar-toggle {
+  top: 15px;
+  right: 28px;
+  /*height: 35px;*/
+  width: auto;
+  color: #ffffff;
+}
+
+.navbar .logo {
+  background: url('../img/logovix.png') 0 10px no-repeat;
+  width: 200px;
+  margin: 15px 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.navbar navbar-brand {
+  margin: 0;
+}
+
+.navbar .navbar-nav {
+  min-height: 20px;
+}
+
+.navbar .navbar-nav li {
+  margin-right: 28px;
+  padding: 14px;
+  border-bottom: solid 3px transparent;
+  -webkit-transition: border-bottom 0.4s;
+  -moz-transition: border-bottom 0.4s;
+  -o-transition: border-bottom 0.4s;
+  transition: border-bottom 0.4s;
+}
+
+.navbar .navbar-nav li a {
+  text-align: center;
+  background: transparent;
+  padding: 0;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.navbar .navbar-nav li.active {
+  border-bottom: solid 5px #3fbbaa;
+  /*padding-bottom: 10px;*/ 
+  /* I couldn't figure out the way to make the border line match the border line of the nav. I guess it has something to do with the navbar default height */   
+    
+}
+
+.navbar .navbar-nav li.active a:hover {
+  background-color: transparent;
+}
+
+.navbar .navbar-nav li:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: solid 5px #3fbbaa;
+}
+
+.navbar .navbar-nav li.header-cta {
+  margin-right: 0;
+  padding: 0;
+}
+
+.navbar .navbar-nav li.header-cta a {
+  padding: 14px;
+}
+
+.navbar .navbar-nav li.header-cta a:hover {
+  color: #ffffff;
+}
+
+
+
+
+/* ========== HERO SECTION ========== */
+
+/* Here I used a hero id as it is the most common way to apply an image and a text on top of it; in this case the form inputs */
+
+#hero {
+  min-height: 100%;
+  background-color: #5d5d5d;
+  color: #fff;
+  font-weight: bold;
+}
+
+#hero h2{
+    
+  /* I decided to do this to prevent bootstrap default style override my style */
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+#bg-img .hero-image {
+  min-width: 50%;  
+  min-height: 50%;
+  background-image: url(../img/bg-img.jpg);
+  opacity: 0.7; /* I wanted to make the form "pop up" more so I made the background image a bit darker */
+  z-index:-1;
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+/* Contact Form */
+
+#contact-form h2 {
+  text-align: center;
+}
+
+.contact-form input{
+  outline: 0;
+  background: #fff;
+  border: 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.contact-form textarea{
+  outline: 0;
+  background: #fff;
+  border: 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.contact-form .checkbox{
+ /* By adding a padding to the checkbox class I make sure that there is an equal separation between the input and the button */
+  padding: 8px 0; 
+  font-size: 14px;
+  vertical-align:top;
+  margin-top: 3px;
+}
+
+#contact-form .error{
+    display: none;
+    color: #AF1400;
+    margin: 10px 0;
+}
+
+
+/* 
+
+I also made the checkbox field a bit larger very easily without using id or classes.
+I found the way to do this thanks to a question in stackoverflow
+
+*/
+
+input[type= checkbox]{
+  transform: scale(1.5);
+  background: #fff;
+  border: 0;
+}
+
+
+
+.contact-form button{
+  outline: 0;
+  background: #3fbbaa;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+
+/* ========== RESPONSIVE MEDIA QUERIES ========== */
+
+/* 
+
+I used just one breakpoint with media queries because there were only two screens in the asessment: web and mobile
+I also thought min-width: 768px was the most suitable breakpoint as it is one of the most commonly used for small devices and tablets
+
+*/
+
+@media only screen and (min-width : 768px) {
+  .navbar .navbar-nav li {
+    border-top: none;
+    margin: 14px;
+  }
+  .navbar .navbar-nav li.header-cta {
+    margin: 21px 28px 28px;
+  }
+  .navbar .navbar-nav li:hover {
+    border-top: none;
+    background-color: #f9f9f9;
+  }       
+  #bg-img .hero-image {
+  min-width: 100%;  
+  min-height: 100%;
+  }
+  #contact-form {
+    position: absolute; /* I use position absolute here because it allows me to put the element exactly where I want in the document */
+    left: 0;  /* By using left, top and right I can set the location of the element very easily */
+    right: 0;
+    top: 150px; /* By setting this attribute I make sure that the element doesn't stay at the top of the page  */
+  }
+  #contact-form h2 {
+    text-align: left;
+  }
+  .navbar {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+}
